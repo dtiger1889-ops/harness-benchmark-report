@@ -1,0 +1,8 @@
+This folder is intentionally empty.
+
+It is the H0 (control) base template: a bare trial directory with no harness
+files at all. run-trial.ps1 copies it, then overlays the per-task seed data
+from templates/seeds/task<ID>/.
+
+Git cannot track an empty directory, which is the only reason this file exists.
+The runner ignores it.

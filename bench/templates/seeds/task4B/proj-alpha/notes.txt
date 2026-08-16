@@ -1,0 +1,4 @@
+Project Alpha — Internal tooling notes
+This project is about the internal deployment pipeline.
+No data relevant to the sales or customer analysis task.
+Status: archived.

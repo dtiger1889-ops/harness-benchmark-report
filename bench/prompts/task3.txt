@@ -1,0 +1,1 @@
+This directory contains a partially completed Python script. Your task is to finish implementing the script so it fully achieves its stated goal (described in the script's comments or docstring). Do not change the script's name or its public interface. Verify the completed script runs correctly before finishing. Do not ask for clarification.

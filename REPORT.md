@@ -188,14 +188,20 @@ The hypothesis as originally written — "a good harness reduces tokens and slow
 
 ## Reproducing this
 
-The benchmark infrastructure:
-- `run-trial.ps1` — trial runner (copies template → invokes claude → captures JSONL → verifier → archive → CSV row).
-- `analyze.py` — paired Wilcoxon across all tasks.
-- `prompts/task{1A,1B,2A,2B,3,4A,4B,4C}.txt` — one canonical prompt per task, frozen.
-- `verifiers/task{…}.ps1` — PowerShell pass/fail scripts.
-- `templates/H0-empty/`, `templates/H1-base/`, `templates/H1-task4C/`, `templates/seeds/task{…}/` — golden copies, immutable during the experiment.
-- `phase2-{1A,1B,2A,2B,3,4A,4B,4C}.ps1` — per-task runner scripts wrapping the 10-pair ABBAAB sequence.
-- `sessions-archive/`, `trials-archive/` — durable per-trial JSONL and full-folder archives (re-parseable for per-turn curves, inspectable for anomalies).
-- `results.csv` — one row per trial, 154 rows.
+**Full step-by-step instructions: [REPRODUCE.md](REPRODUCE.md).** The complete
+benchmark infrastructure ships in [`bench/`](bench/) — these results came from
+exactly those files:
 
-Total wall-clock to rerun end-to-end: roughly 3 hours of active trial time plus the analysis pass. If you want to adapt this to a different harness shape or a different task distribution, the runner and analyzer are the only pieces that need to stay; everything else is data.
+- `bench/run-trial.ps1` — trial runner (copies template → invokes claude → captures JSONL → verifier → archive → CSV row).
+- `bench/analyze.py` — paired Wilcoxon across all tasks.
+- `bench/prompts/task{1A,1B,2A,2B,3,4A,4B,4C}.txt` — one canonical prompt per task, frozen before the first trial.
+- `bench/verifiers/task{…}.ps1` — PowerShell pass/fail scripts.
+- `bench/templates/H0-empty/`, `H1-base/`, `H1-task4C/`, `seeds/task{…}/` — golden copies, immutable during the experiment.
+- `bench/launchers/phase2-{1B,2A,2B,3,4A,4B,4C}.ps1` — per-task runner scripts wrapping the 10-pair ABBAAB sequence.
+- `bench/dry-run.ps1` — end-to-end smoke test; run it before spending money on a full sweep.
+- `bench/.claude/settings.json` — the pre-approved tool list. Headless `claude -p` can't answer a permission prompt, so without this every trial stalls to the wall-time limit.
+- [`results.csv`](results.csv) — one row per trial, 154 rows, at the repo root.
+
+Not shipped: the per-trial session JSONLs and full trial folders (`sessions-archive/`, `trials-archive/` in the original bench). They were retained locally for per-turn curve re-parsing and anomaly inspection; `results.csv` carries every metric the report uses.
+
+Total wall-clock to rerun end-to-end: roughly 3 hours of active trial time plus the analysis pass. If you want to adapt this to a different harness shape or a different task distribution, the runner and analyzer are the only pieces that need to stay; everything else is data. [REPRODUCE.md](REPRODUCE.md) § 7 walks through adding an H2 variant or a new task.

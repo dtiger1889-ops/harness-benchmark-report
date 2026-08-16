@@ -1,0 +1,18 @@
+Create a Python script named stats.py in this directory. The script must:
+1. Define a hardcoded list of exactly 20 integers (you choose the values, mix of single and double digits).
+2. Compute and print exactly these five statistics, one per line, using the format STATNAME: VALUE where STATNAME is the lowercase name and VALUE is the number:
+   - mean
+   - median
+   - mode (most common value; if tied, pick the smallest)
+   - range (max minus min)
+   - stdev (population standard deviation, rounded to 4 decimal places)
+3. Run with zero command-line arguments.
+
+Example of the required output (values will differ based on your list):
+mean: 42.5
+median: 41.0
+mode: 7
+range: 88
+stdev: 23.1234
+
+After writing the script, run it with python stats.py and confirm all 5 lines appear. Do not ask for clarification.

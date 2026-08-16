@@ -1,0 +1,3 @@
+Project Gamma — Server configuration
+Nginx configs and deployment scripts.
+No customer or sales data here.

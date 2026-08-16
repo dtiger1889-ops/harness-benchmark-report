@@ -1,0 +1,8 @@
+The quick brown fox jumps over the lazy dog. The dog barked at the fox.
+The fox ran away quickly. A quick fox is a clever fox. The lazy dog slept.
+Python is a great language for quick scripts. Scripts written in Python
+are often clear and readable. Readability counts. Simple is better than
+complex. Complex is better than complicated. Flat is better than nested.
+The Zen of Python guides Python developers. A developer who reads the Zen
+often writes better code. Code is read more than it is written. The fox
+agrees that readable code is the best code. The dog prefers sleeping.
