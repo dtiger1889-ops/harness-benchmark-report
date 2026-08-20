@@ -4,6 +4,8 @@ This repo contains the full write-up and data for a controlled experiment measur
 
 **Design:** 154 paired trials across 8 task types (closed implementation tasks, exploratory orientation tasks, resume-from-cold-start tasks), each run with and without the harness under otherwise identical conditions. Primary metrics: output tokens and logical decision turns. Significance via Wilcoxon signed-rank on the paired differences.
 
+**Model:** every trial ran on `claude-sonnet-4-6`, pinned for the full experiment (run in early-to-mid 2026, predating the Claude 5 model family). These results describe that model's behavior on these tasks — they are not a claim about any other model, including newer ones. See [REPORT.md](REPORT.md) § What was tested for the exact pin and § Limitations for what that does and doesn't generalize to.
+
 **Headline results** (details and caveats in [REPORT.md](REPORT.md)):
 
 - Exploratory, orientation-dominated tasks: the harness pays for itself several times over on tokens; a full per-project hierarchy beats a single top-level file.
