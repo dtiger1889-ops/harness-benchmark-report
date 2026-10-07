@@ -1,5 +1,7 @@
 # Does a memory harness make coding agents cheaper? A paired benchmark
 
+![Change in median output tokens across the eight tasks, calculated from the published benchmark data](assets/example-output.png)
+
 This repo contains the full write-up and data for a controlled experiment measuring whether a lightweight "memory harness" (persistent `CLAUDE.md` instruction files plus a `CHECKPOINT.md` state file) changes the cost and reliability of LLM coding-agent sessions.
 
 **Design:** 154 paired trials across 8 task types (closed implementation tasks, exploratory orientation tasks, resume-from-cold-start tasks), each run with and without the harness under otherwise identical conditions. Primary metrics: output tokens and logical decision turns. Significance via Wilcoxon signed-rank on the paired differences.
