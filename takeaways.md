@@ -2,7 +2,7 @@
 
 Last updated: 2026-05-22 (methods correction; see below)
 
-Living log of what we've observed across tasks. Append on each completed task; do not rewrite the history. *Exception: the 2026-05-22 methods correction updated numeric claims that were SDK-counting artifacts — see [turn_logical_schema_bump.md](turn_logical_schema_bump.md). Original `turn_count` numbers were preserved in `phase2-1-4-final-results.preTurnLogical.csv`.*
+Living log of what we've observed across tasks. Append on each completed task; do not rewrite the history. *Exception: the 2026-05-22 methods correction updated numeric claims that were SDK-counting artifacts — see the Methods correction at the top of [REPORT.md](REPORT.md). The original numbers are still in the `turn_count` column of [`results.csv`](results.csv).*
 
 ---
 
@@ -87,7 +87,7 @@ The "turn savings/tax" framing in earlier drafts was inflated by the SDK emittin
 | 4B | open, prompt pre-orients | 0% (NS) | +35% | **+64%** (tax) |
 | 4C | open, full hierarchical harness | 0% (NS) | **−45%** | **−25%** |
 
-*Tasks 1A and 2A: turn_logical unavailable -- pilot trials ran before sessions-archive existed, no source jsonl. See [turn_logical_schema_bump.md](turn_logical_schema_bump.md).
+*Tasks 1A and 2A: turn_logical unavailable -- pilot trials ran before sessions-archive existed, no source jsonl, so those 34 rows have a blank `turn_logical` in [`results.csv`](results.csv).
 
 Three regimes visible here:
 - **Trivial or pre-oriented tasks (1B, 4B):** harness is pure tax. Startup ritual runs, finds no relevant state, burns tokens on narration. 1B also adds significantly more decision turns. 4B's tax shows up entirely on tokens (cache_read, input) -- decision-turn count is unchanged.

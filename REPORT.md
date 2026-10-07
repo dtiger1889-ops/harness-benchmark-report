@@ -2,7 +2,15 @@
 
 An empirical benchmark across 8 tasks, 154 paired Claude Code trials.
 
-> **Methods correction (2026-05-22):** the original analysis used the Claude Code SDK's `turn_count`, which counts *content blocks* (text + tool_use emitted separately) rather than logical decision turns. The 154 historical trials were backfilled with a corrected `turn_logical` metric (distinct `message.id` count). The turn-count headlines for Tasks 4A, 4B, and 4C turned out to be SDK-counting artifacts — those three tasks show no significant difference in actual decision turns. **The token, cache_read, and input findings are unchanged** (those are direct API measurements, not turn-derived) and the qualitative conclusions still hold: harness helps on exploratory work, hurts on pre-oriented work. The tables and numbers below have been updated. See [turn_logical_schema_bump.md](turn_logical_schema_bump.md) for full details.
+> **Methods correction (2026-05-22):** the original analysis used the Claude Code SDK's `turn_count`, which counts *content blocks* (text + tool_use emitted separately) rather than logical decision turns. The 154 historical trials were backfilled with a corrected `turn_logical` metric (distinct `message.id` count). The turn-count headlines for Tasks 4A, 4B, and 4C turned out to be SDK-counting artifacts — those three tasks show no significant difference in actual decision turns. **The token, cache_read, and input findings are unchanged** (those are direct API measurements, not turn-derived) and the qualitative conclusions still hold: harness helps on exploratory work, hurts on pre-oriented work. The tables and numbers below have been updated. What changed for the turn findings:
+>
+> | Task | Original `turn_count` | Corrected `turn_logical` |
+> |---|---|---|
+> | 4A | −19% turns, p=0.010 (reported as a significant win) | +25% turns, p=0.93 (not significant) |
+> | 4B | +56% turns, p=0.002 (reported as the clearest loss) | 0% turns, p=0.57 (not significant) |
+> | 4C | −25% turns, p=0.008 (reported as the clearest win) | 0% turns, p=0.39 (not significant) |
+>
+> Both counts are in [`results.csv`](results.csv): `turn_count` keeps the original numbers, `turn_logical` holds the corrected ones.
 
 ---
 
