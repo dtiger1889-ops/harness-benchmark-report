@@ -196,9 +196,19 @@ two. It is not a count of decisions, and it is inflated by however much the mode
 narrates. `turn_logical` (distinct `message.id`) is the honest turn metric.
 
 This mattered: the original analysis reported turn-count effects on Tasks 4A, 4B
-and 4C that vanished under `turn_logical`. Token, cache-read, and input findings
-were unaffected because those are direct API measurements. **Report
-`turn_logical`.** `turn_count` is retained only so the correction stays auditable.
+and 4C that vanished under `turn_logical`. **Report `turn_logical`.** `turn_count`
+is retained only so the correction stays auditable.
+
+The same one-row-per-content-block behavior also inflates token totals. Each row
+repeats the whole message's usage, so summing every row counts most API calls two
+or three times (cache reads by a median 35%, cache writes by 48%). Count usage once
+per distinct `message.id`, and take output tokens from the trial's final result
+record, which holds the complete count.
+
+> **Correction (2026-10-18).** This section used to say token, cache-read and input
+> findings "were unaffected because those are direct API measurements." That was
+> wrong: they were summed per row and double-counted the same way. See the
+> corrections in [REPORT.md](REPORT.md).
 
 ---
 
