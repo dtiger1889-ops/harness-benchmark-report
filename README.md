@@ -1,5 +1,7 @@
 # Does a memory harness make coding agents cheaper? A paired benchmark
 
+**Follow-up study: [PAPER.md](PAPER.md)** tests whether the harness changes the quality of the next real milestone when an agent resumes six real projects (blind judge, both presentation orders, a second judge from another model family). Result: 4 projects lean harness, 1 leans the single-file comparison, 1 is even; not significant (p = 0.375). Data, figures and a replication kit are linked from it.
+
 ![Superseded chart: change in median output tokens across the eight tasks, from the original output counts later found to be wrong](assets/example-output.png)
 
 *Superseded chart, kept as published. It plots the change in median output tokens per task from the first version's output counts, which the corrections below showed were wrong. With complete counts, output differs significantly on only two tasks, in opposite directions: +41% on Task 2B and −10% on Task 1A.*

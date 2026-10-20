@@ -1,0 +1,12 @@
+{
+  "root": "/path/to/bench-workspace",
+  "trials_dir": "/path/to/bench-trials",
+  "done_dir": "/path/to/bench-done",
+  "worker_model": "claude-sonnet-5-5",
+  "judge_model": "claude-opus-5-5",
+  "judge_effort": "high",
+  "claude_cmd": ["claude"],
+  "forbidden_launch_roots": ["/path/to/your/own/projects"],
+  "leak_patterns": ["your-private-folder-name"],
+  "benign_prefixes": []
+}

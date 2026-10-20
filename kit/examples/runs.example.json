@@ -1,0 +1,4 @@
+{
+  "_comment": "Copy to <root>/runs.json. pairs_per_packet = the valid-pair target plus one replacement per pair voided among the first `target` pairs; raise it only for replacements.",
+  "run1": {"prefix": "run1", "pairs_per_packet": {"P1": 4, "P2": 4}, "valid_pairs_target": 4}
+}

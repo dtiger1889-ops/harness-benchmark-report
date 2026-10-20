@@ -1,0 +1,19 @@
+pair,project,first_judge_verdict,first_judge_confidence,second_pick_harness_shown_first,second_pick_comparison_shown_first,second_judge_pair,second_confidence_h_first,second_confidence_c_first,judges_agree,second_harness_mustpass_failed_h_first,second_comparison_mustpass_failed_h_first,second_harness_mustpass_failed_c_first,second_comparison_mustpass_failed_c_first,second_judge_tokens
+pilot-A-p1,A,harness,medium,harness,harness,harness,high,high,1,,,,,116479
+pilot-A-p2,A,harness,medium,harness,harness,harness,medium,medium,1,,,,,85143
+pilot-B-p2,B,harness,low,harness,harness,harness,medium,medium,1,,,,,59265
+main-A-p2,A,harness,low,harness,harness,harness,medium,medium,1,,,,,91115
+main-A-p5,A,comparison,medium,comparison,comparison,comparison,high,high,1,,,,,120854
+main-A-p6,A,harness,medium,harness,harness,harness,high,high,1,,,,,112046
+main-A-p7,A,comparison,low,harness,comparison,split,medium,medium,0,,,,,80352
+main-B-p1,B,harness,low,harness,harness,harness,medium,medium,1,,,,,59102
+main-B-p2,B,harness,low,harness,harness,harness,medium,medium,1,,,,,59160
+main-B-p4,B,tie,medium,harness,harness,harness,medium,medium,0,,,,,59571
+main-B-p6,B,harness,low,harness,harness,harness,medium,medium,1,,,,,59617
+run2-C-p2,C,harness,medium,harness,harness,harness,high,high,1,E3,E3 E5,E3,E3 E5,95785
+run2-C-p3,C,harness,medium,comparison,harness,split,medium,medium,0,E3,,E3,E3,93860
+run2-C-p4,C,harness,low,harness,harness,harness,high,high,1,,E3,,E3,92940
+run2-D-p1,D,harness,low,harness,harness,harness,high,high,1,,,,,76777
+run2-D-p2,D,harness,medium,harness,harness,harness,high,high,1,,,,,74864
+run2-D-p4,D,comparison,medium,comparison,comparison,comparison,high,high,1,D4,,D4,,80778
+run2-D-p5,D,harness,low,comparison,comparison,comparison,high,high,0,D4,,D4,,78864

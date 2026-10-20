@@ -1,0 +1,61 @@
+project,fixture_x,fixture_y,expected_preference,expected_x_fails_mustpass,expected_y_fails_mustpass,order,actual_preference,actual_x_mustpass_failed,actual_y_mustpass_failed,pair_ok
+B,known_good,missing,x,0,1,x_first,x,,E1 E2 E3 E4,1
+B,known_good,missing,x,0,1,y_first,x,,E1 E2 E3 E4,1
+B,known_good,polished_wrong,x,0,1,x_first,x,,E2 E3,1
+B,known_good,polished_wrong,x,0,1,y_first,x,,E2 E3,1
+B,known_good,valid_alternative,any,0,0,x_first,y,,,1
+B,known_good,valid_alternative,any,0,0,y_first,y,,,1
+B,known_good,padded,x_or_tie,0,0,x_first,x,,,1
+B,known_good,padded,x_or_tie,0,0,y_first,x,,,1
+B,known_good,known_good,tie,0,0,x_first,tie,,,1
+B,known_good,known_good,tie,0,0,y_first,tie,,,1
+A,known_good,untouched,x,0,1,x_first,x,,E3 E4,1
+A,known_good,untouched,x,0,1,y_first,x,,E3 E4,1
+A,known_good,polished_wrong,x,0,1,x_first,x,,E1 E3,1
+A,known_good,polished_wrong,x,0,1,y_first,x,,E1 E3,1
+A,known_good,valid_alternative,any,0,0,x_first,y,,,1
+A,known_good,valid_alternative,any,0,0,y_first,tie,,,1
+A,known_good,padded,x_or_tie,0,0,x_first,x,,,1
+A,known_good,padded,x_or_tie,0,0,y_first,x,,,1
+A,known_good,known_good,tie,0,0,x_first,tie,,,1
+A,known_good,known_good,tie,0,0,y_first,tie,,,1
+C,known_good,missing,x,0,1,x_first,x,,E1 E2 E3 E4 E5,1
+C,known_good,missing,x,0,1,y_first,x,,E1 E2 E3 E4 E5,1
+C,known_good,polished_wrong,x,0,1,x_first,x,,E4 E5,1
+C,known_good,polished_wrong,x,0,1,y_first,x,,E4 E5,1
+C,known_good,valid_alternative,any,0,0,x_first,x,,,1
+C,known_good,valid_alternative,any,0,0,y_first,x,,,1
+C,known_good,padded,x_or_tie,0,0,x_first,x,,,1
+C,known_good,padded,x_or_tie,0,0,y_first,x,,,1
+C,known_good,known_good,tie,0,0,x_first,tie,,,1
+C,known_good,known_good,tie,0,0,y_first,tie,,,1
+D,known_good,untouched,x,0,1,x_first,x,,D4,1
+D,known_good,untouched,x,0,1,y_first,x,,D4,1
+D,known_good,polished_wrong,x,0,1,x_first,x,,D3,1
+D,known_good,polished_wrong,x,0,1,y_first,x,,D3,1
+D,known_good,valid_alternative,any,0,0,x_first,x,,,1
+D,known_good,valid_alternative,any,0,0,y_first,x,,,1
+D,known_good,padded,x_or_tie,0,0,x_first,tie,,,1
+D,known_good,padded,x_or_tie,0,0,y_first,x,,,1
+D,known_good,known_good,tie,0,0,x_first,tie,,,1
+D,known_good,known_good,tie,0,0,y_first,tie,,,1
+E,known_good,missing,x,0,1,x_first,x,,E1 E2 E3 E4 E5,1
+E,known_good,missing,x,0,1,y_first,x,,E1 E2 E3 E4 E5,1
+E,known_good,polished_wrong,x,0,1,x_first,x,,E4 E5,1
+E,known_good,polished_wrong,x,0,1,y_first,x,,E4 E5,1
+E,known_good,valid_alternative,any,0,0,x_first,x,,,1
+E,known_good,valid_alternative,any,0,0,y_first,x,,,1
+E,known_good,padded,x_or_tie,0,0,x_first,x,,,1
+E,known_good,padded,x_or_tie,0,0,y_first,x,,,1
+E,known_good,known_good,tie,0,0,x_first,tie,,,1
+E,known_good,known_good,tie,0,0,y_first,tie,,,1
+F,known_good,untouched,x,0,1,x_first,x,,F2 F3 F4,1
+F,known_good,untouched,x,0,1,y_first,x,,F2 F3 F4,1
+F,known_good,polished_wrong,x,0,1,x_first,x,,F2,1
+F,known_good,polished_wrong,x,0,1,y_first,x,,F2,1
+F,known_good,valid_alternative,any,0,0,x_first,x,,,1
+F,known_good,valid_alternative,any,0,0,y_first,x,,,1
+F,known_good,padded,x_or_tie,0,0,x_first,tie,,,1
+F,known_good,padded,x_or_tie,0,0,y_first,tie,,,1
+F,known_good,known_good,tie,0,0,x_first,tie,,,1
+F,known_good,known_good,tie,0,0,y_first,tie,,,1

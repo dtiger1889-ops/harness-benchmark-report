@@ -1,0 +1,39 @@
+run,project,pair,status,voided_sides,pick_harness_shown_first,pick_comparison_shown_first,pair_verdict,confidence_harness_shown_first,confidence_comparison_shown_first,harness_mustpass_failed_h_first,comparison_mustpass_failed_h_first,harness_mustpass_failed_c_first,comparison_mustpass_failed_c_first,judge_tokens_h_first,judge_tokens_c_first
+pilot,B,smoke-B-p1,judged,,harness,harness,harness,high,high,,E2,,E2,17349,17570
+pilot,B,pilot-B-p2,judged,,harness,harness,harness,low,low,,,,,18645,18659
+pilot,A,pilot-A-p1,judged,,harness,harness,harness,medium,medium,,,,,63295,62908
+pilot,A,pilot-A-p2,judged,,harness,harness,harness,medium,medium,,,,,39748,39622
+main,A,main-A-p1,judged,,harness,harness,harness,high,high,,E2,,E2,65585,65406
+main,A,main-A-p2,judged,,harness,harness,harness,low,medium,E2,E2,E2,E2,44777,44683
+main,A,main-A-p3,excluded (void),harness,,,,,,,,,,,
+main,A,main-A-p4,excluded (void),harness,,,,,,,,,,,
+main,A,main-A-p5,judged,,comparison,comparison,comparison,medium,medium,,,,,67323,67383
+main,A,main-A-p6,judged,,harness,harness,harness,medium,medium,,,,,60011,60068
+main,A,main-A-p7,judged,,comparison,comparison,comparison,low,low,,,,,36003,36094
+main,B,main-B-p1,judged,,harness,harness,harness,low,low,,,,,18865,18513
+main,B,main-B-p2,judged,,harness,harness,harness,low,low,,,,,19204,18884
+main,B,main-B-p3,excluded (void),harness,,,,,,,,,,,
+main,B,main-B-p4,judged,,tie,tie,tie,medium,medium,,,,,19097,19052
+main,B,main-B-p5,judged,,harness,harness,harness,high,high,,E2,,E2,18410,18583
+main,B,main-B-p6,judged,,harness,harness,harness,low,low,,,,,19071,18867
+run2,C,run2-C-p1,judged,,harness,harness,harness,medium,medium,,E5,,E5,47491,48631
+run2,C,run2-C-p2,judged,,harness,harness,harness,medium,medium,,,,,48978,49312
+run2,C,run2-C-p3,judged,,harness,harness,harness,medium,medium,,,,,46077,45397
+run2,C,run2-C-p4,judged,,harness,harness,harness,low,medium,,,,,46461,46512
+run2,D,run2-D-p1,judged,,harness,harness,harness,low,low,,,,,32181,32029
+run2,D,run2-D-p2,judged,,harness,harness,harness,medium,medium,,,,,30449,30693
+run2,D,run2-D-p3,excluded (void),comparison,,,,,,,,,,,
+run2,D,run2-D-p4,judged,,comparison,comparison,comparison,medium,medium,,,,,35284,35056
+run2,D,run2-D-p5,judged,,harness,harness,harness,low,low,,,,,33749,33834
+run3,E,run3-E-p1,excluded (void),harness,,,,,,,,,,,
+run3,E,run3-E-p2,judged,,comparison,comparison,comparison,low,low,,,,,36526,36721
+run3,E,run3-E-p3,excluded (void),harness,,,,,,,,,,,
+run3,E,run3-E-p4,judged,,comparison,tie,tie,low,medium,,,,,36681,36902
+run3,E,run3-E-p5,judged,,comparison,comparison,comparison,medium,medium,E5,,E5,,36117,36410
+run3,E,run3-E-p6,excluded (void),harness+comparison,,,,,,,,,,,
+run3,F,run3-F-p1,judged,,harness,harness,harness,medium,medium,,F2,,,53732,54863
+run3,F,run3-F-p2,judged,,comparison,comparison,comparison,medium,medium,,,,,56284,56060
+run3,F,run3-F-p3,excluded (void),comparison,,,,,,,,,,,
+run3,F,run3-F-p4,excluded (void),harness+comparison,,,,,,,,,,,
+run3,F,run3-F-p5,excluded (void),comparison,,,,,,,,,,,
+run3,F,run3-F-p6,excluded (void),harness+comparison,,,,,,,,,,,

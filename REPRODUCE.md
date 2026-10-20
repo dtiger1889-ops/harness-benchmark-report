@@ -214,9 +214,13 @@ record, which holds the complete count.
 
 ## 6. Things that will bite you
 
-- **Do not launch trials from inside an interactive Claude Code session.** The
-  CLI's anti-recursion guard blocks nested `claude -p`, and the safety
-  classifier blocks the workaround. Use a plain PowerShell window.
+- **Run trials from a plain PowerShell window if you can.** (Corrected
+  2026-10-20: this line used to say a Claude Code session cannot launch
+  `claude -p` at all. On Claude Code 2.1.304 it can: a later runner launched 24
+  trials that way, with the same kind of flags as `run-trial.ps1`. Claude Code's
+  auto-mode safety check has still refused some benchmark steps run from inside a
+  session, with and without `--dangerously-skip-permissions`, so a plain terminal
+  stays the dependable choice.)
 - **Pin the model and stay off fast mode.** The runner defaults to
   `-Model claude-sonnet-4-6`. Fast mode substitutes a different model, which
   breaks comparability with the published rows. Every row records the model, so

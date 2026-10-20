@@ -1,0 +1,77 @@
+run,project,pair,trial,arm,date,worker_model,cli_version,duration_s,turns,input,output,cache_read,cache_write,cache_write_5m,cache_write_1h,total_tokens,peak_context,outside_refs,void,void_reason,in_judged_pair
+pilot,B,smoke-B-p1,smoke-B-p1-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,55.0,12,14,5141,290155,56914,0,56914,352224,56916,0,0,,1
+pilot,B,smoke-B-p1,smoke-B-p1-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,43.4,8,8,4024,159924,23578,0,23578,187534,50771,0,0,,1
+pilot,A,pilot-A-p1,pilot-A-p1-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,93.9,18,20,9740,571304,46798,0,46798,627862,73991,0,0,,1
+pilot,A,pilot-A-p1,pilot-A-p1-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,228.0,20,34,34010,1321983,82711,0,82711,1438738,109904,0,0,,1
+pilot,A,pilot-A-p2,pilot-A-p2-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,95.0,11,20,8273,548420,50421,0,50421,607134,77614,0,0,,1
+pilot,A,pilot-A-p2,pilot-A-p2-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,88.9,17,14,10274,369005,50238,0,50238,429531,77431,0,0,,1
+pilot,B,pilot-B-p2,pilot-B-p2-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,49.2,14,14,5574,327079,34591,0,34591,367258,61784,0,0,,1
+pilot,B,pilot-B-p2,pilot-B-p2-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,59.6,15,16,6881,379466,33631,0,33631,419994,60824,0,0,,1
+main,A,main-A-p1,main-A-p1-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,165.0,18,24,21147,886774,110042,0,110042,1017987,110044,0,0,,1
+main,A,main-A-p1,main-A-p1-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,179.1,18,34,28932,1204265,77667,0,77667,1310898,104860,0,0,,1
+main,A,main-A-p2,main-A-p2-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,61.7,11,18,8424,418941,32900,0,32900,460283,60093,0,0,,1
+main,A,main-A-p2,main-A-p2-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,77.7,18,18,9678,492294,46669,0,46669,548659,73862,0,0,,1
+main,A,main-A-p3,main-A-p3-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,187.3,29,50,23208,2227341,85403,0,85403,2336002,112596,1,1,looked for a tool install folder outside its copy (strict run-1 rule),0
+main,A,main-A-p3,main-A-p3-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,56.6,9,16,7014,372542,33185,0,33185,412757,60378,0,0,,0
+main,A,main-A-p4,main-A-p4-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,57.2,7,14,6928,313523,31957,0,31957,352422,59150,0,0,,0
+main,A,main-A-p4,main-A-p4-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,63.3,17,16,8618,421259,42723,0,42723,472616,69916,1,1,"listed the shared trials folder, which held only itself (strict run-1 rule)",0
+main,A,main-A-p5,main-A-p5-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,195.3,37,54,28026,2397101,83430,0,83430,2508611,110623,0,0,,1
+main,A,main-A-p5,main-A-p5-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,55.1,8,16,7073,370834,32715,0,32715,410638,59908,0,0,,1
+main,B,main-B-p1,main-B-p1-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,47.7,10,14,5495,322230,31881,0,31881,359620,59074,0,0,,1
+main,B,main-B-p1,main-B-p1-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,41.8,13,16,4725,365292,27133,0,27133,397166,54326,0,0,,1
+main,B,main-B-p2,main-B-p2-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,44.7,13,12,5258,268128,31177,0,31177,304575,58370,0,0,,1
+main,B,main-B-p2,main-B-p2-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,44.9,8,14,4971,314769,28812,0,28812,348566,56005,0,0,,1
+main,B,main-B-p3,main-B-p3-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,47.1,13,12,5512,270144,31401,0,31401,307069,58594,1,1,ran a git command whose path pointed above its copy (strict run-1 rule),0
+main,B,main-B-p3,main-B-p3-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,39.1,11,12,4890,266077,29276,0,29276,300255,56469,0,0,,0
+main,B,main-B-p4,main-B-p4-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,42.4,8,10,4550,212301,26485,0,26485,243346,53678,0,0,,1
+main,B,main-B-p4,main-B-p4-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,46.6,11,12,5537,264759,29365,0,29365,299673,56558,0,0,,1
+main,B,main-B-p5,main-B-p5-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,47.0,8,14,5181,316061,28955,0,28955,350211,56148,0,0,,1
+main,B,main-B-p5,main-B-p5-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,35.0,8,8,4087,160013,23538,0,23538,187646,50731,0,0,,1
+main,A,main-A-p6,main-A-p6-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,213.7,22,42,32185,1669958,80744,0,80744,1782929,107937,0,0,,1
+main,A,main-A-p6,main-A-p6-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,68.7,12,16,8108,422823,43982,0,43982,474929,71175,0,0,,1
+main,A,main-A-p7,main-A-p7-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,74.5,17,20,9407,574999,47145,0,47145,631571,74338,0,0,,1
+main,A,main-A-p7,main-A-p7-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,54.8,9,16,6967,365828,33271,0,33271,406082,60464,0,0,,1
+main,B,main-B-p6,main-B-p6-comparison,comparison,2026-10-17,claude-sonnet-5-5,2.1.302,40.3,10,14,4703,324413,31056,0,31056,360186,58249,0,0,,1
+main,B,main-B-p6,main-B-p6-harness,harness,2026-10-17,claude-sonnet-5-5,2.1.302,59.5,13,14,6689,327643,33629,0,33629,367975,60822,0,0,,1
+run2,C,run2-C-p1,run2-C-p1-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,136.1,17,28,17347,971092,96372,0,96372,1084839,96374,0,0,,1
+run2,C,run2-C-p1,run2-C-p1-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,173.6,21,34,21275,1315249,77782,0,77782,1414340,104975,0,0,,1
+run2,C,run2-C-p2,run2-C-p2-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,127.5,15,28,15999,878894,53880,0,53880,948801,81073,0,0,,1
+run2,C,run2-C-p2,run2-C-p2-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,135.8,20,30,18093,1011114,65147,0,65147,1094384,92340,0,0,,1
+run2,C,run2-C-p3,run2-C-p3-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,148.4,23,34,19026,1103199,59897,0,59897,1182156,87090,0,0,,1
+run2,C,run2-C-p3,run2-C-p3-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,102.2,17,22,13423,643016,49948,0,49948,706409,77141,0,0,,1
+run2,C,run2-C-p4,run2-C-p4-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,136.4,19,30,17096,978445,54576,0,54576,1050147,81769,0,0,,1
+run2,C,run2-C-p4,run2-C-p4-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,112.6,13,24,12325,662026,48002,0,48002,722377,75195,0,0,,1
+run2,D,run2-D-p1,run2-D-p1-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,82.6,26,22,11331,614578,46744,0,46744,672675,73937,0,0,,1
+run2,D,run2-D-p1,run2-D-p1-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,83.5,29,28,10857,844820,46869,0,46869,902574,74062,0,0,,1
+run2,D,run2-D-p2,run2-D-p2-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,94.4,22,32,10989,1065103,55089,0,55089,1131213,82282,0,0,,1
+run2,D,run2-D-p2,run2-D-p2-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,76.3,28,24,10729,676353,46293,0,46293,733399,73486,0,0,,1
+run2,D,run2-D-p3,run2-D-p3-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,74.9,9,18,9300,460269,39831,0,39831,509418,67024,0,0,,0
+run2,D,run2-D-p3,run2-D-p3-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,224.8,25,38,12752,1291516,54541,0,54541,1358847,81734,3,1,wrote and ran scratch scripts in a shared temp folder,0
+run2,D,run2-D-p4,run2-D-p4-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,88.1,26,24,11906,762710,55654,0,55654,830294,82847,0,0,,1
+run2,D,run2-D-p4,run2-D-p4-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,125.0,30,28,15713,971477,67472,0,67472,1054690,94665,0,0,,1
+run2,D,run2-D-p5,run2-D-p5-harness,harness,2026-10-18,claude-sonnet-5-5,2.1.302,234.0,23,32,15417,1037543,58254,0,58254,1111246,85447,0,0,,1
+run2,D,run2-D-p5,run2-D-p5-comparison,comparison,2026-10-18,claude-sonnet-5-5,2.1.302,73.1,28,24,10259,728449,47785,0,47785,786517,74978,0,0,,1
+run3,E,run3-E-p1,run3-E-p1-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,62.8,14,14,6501,322622,65810,0,65810,394947,65812,1,1,listed a placeholder path the packet builder left where the notes named a private folder,0
+run3,E,run3-E-p1,run3-E-p1-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,96.2,14,18,9543,513786,49117,0,49117,572464,76310,0,0,,0
+run3,E,run3-E-p2,run3-E-p2-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,89.4,10,18,9309,503143,44442,0,44442,556912,71635,0,0,,1
+run3,E,run3-E-p2,run3-E-p2-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,77.9,15,12,8418,308199,49381,0,49381,366010,76574,0,0,,1
+run3,E,run3-E-p3,run3-E-p3-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,78.0,15,14,8127,393007,54475,0,54475,455623,81668,1,1,listed a placeholder path the packet builder left where the notes named a private folder,0
+run3,E,run3-E-p3,run3-E-p3-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,97.7,8,16,10795,497322,63159,0,63159,571292,90352,0,0,,0
+run3,E,run3-E-p4,run3-E-p4-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,91.1,16,18,9973,548256,55640,0,55640,613887,82833,0,0,,1
+run3,E,run3-E-p4,run3-E-p4-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,63.2,14,12,7797,287513,39562,0,39562,334884,66755,0,0,,1
+run3,E,run3-E-p5,run3-E-p5-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,77.5,15,14,8509,384274,50358,0,50358,443155,77551,0,0,,1
+run3,E,run3-E-p5,run3-E-p5-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,92.9,15,20,9915,602807,54398,0,54398,667140,81591,0,0,,1
+run3,E,run3-E-p6,run3-E-p6-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,80.3,12,14,9340,395414,54591,0,54591,459359,81784,1,1,listed a placeholder path the packet builder left where the notes named a private folder,0
+run3,E,run3-E-p6,run3-E-p6-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,79.8,17,16,8624,419396,48628,0,48628,476664,75821,1,1,listed a placeholder path the packet builder left where the notes named a private folder,0
+run3,F,run3-F-p1,run3-F-p1-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,162.0,24,48,19518,1612123,60184,0,60184,1691873,87377,0,0,,1
+run3,F,run3-F-p1,run3-F-p1-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,143.7,17,34,19620,1059620,56765,0,56765,1136039,83958,0,0,,1
+run3,F,run3-F-p2,run3-F-p2-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,189.4,27,48,27659,1778217,72616,0,72616,1878540,99809,0,0,,1
+run3,F,run3-F-p2,run3-F-p2-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,175.6,17,34,22561,1094626,61881,0,61881,1179102,89074,0,0,,1
+run3,F,run3-F-p3,run3-F-p3-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,257.6,26,50,27269,1846388,75320,0,75320,1949027,102513,0,0,,0
+run3,F,run3-F-p3,run3-F-p3-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,202.3,23,44,23693,1539529,64517,0,64517,1627783,91710,1,1,wrote a scratch file in the temp folder,0
+run3,F,run3-F-p4,run3-F-p4-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,130.6,16,30,19453,915479,55528,0,55528,990490,82721,3,1,wrote a backup file into the shared trials folder,0
+run3,F,run3-F-p4,run3-F-p4-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,205.6,34,62,24971,2329858,70589,0,70589,2425480,97782,7,1,sent a local web request to a test server it had started itself,0
+run3,F,run3-F-p5,run3-F-p5-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,201.8,25,44,27124,1610145,75612,0,75612,1712925,102805,1,0,,0
+run3,F,run3-F-p5,run3-F-p5-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,186.1,31,54,19807,1781090,58073,0,58073,1859024,85266,2,1,wrote a scratch file in the temp folder,0
+run3,F,run3-F-p6,run3-F-p6-comparison,comparison,2026-10-20,claude-sonnet-5-5,2.1.304,181.8,20,36,25906,1247122,68426,0,68426,1341490,95619,1,1,sent a local web request to a test server it had started itself,0
+run3,F,run3-F-p6,run3-F-p6-harness,harness,2026-10-20,claude-sonnet-5-5,2.1.304,210.9,33,52,29222,2018102,75705,0,75705,2123081,102898,4,1,wrote a scratch file in the temp folder,0

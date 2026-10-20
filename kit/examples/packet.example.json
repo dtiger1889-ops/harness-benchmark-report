@@ -1,0 +1,20 @@
+{
+  "_comment": "Copy to <root>/packets/<id>/packet.json. Every value here is a placeholder describing what goes there.",
+  "kind": "write-up",
+  "project": ".",
+  "sources": [
+    ["CLAUDE.md", "Project overview and rules"],
+    ["CHECKPOINT.md", "Project state, decisions, open work and history"]
+  ],
+  "drops": [
+    "<!-- v\\d+ .*?-->",
+    "^- `CHECKPOINT\\.md` .*$",
+    "^## Next step$"
+  ],
+  "facts": {
+    "F1": "a regular expression matching the line that states fact 1",
+    "F2": "a regular expression matching the line that states fact 2"
+  },
+  "rubric": "judge_rubric.md",
+  "grader": null
+}
