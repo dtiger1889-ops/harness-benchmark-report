@@ -76,6 +76,16 @@ def run(label, keep):
     cm = sorted(tok[(r['pair'], 'comparison')] for r in rows)
     mid = lambda v: v[len(v) // 2] if len(v) % 2 else (v[len(v) // 2 - 1] + v[len(v) // 2]) / 2
     w, n, p = signed_rank_p(logs)
+    # 95% interval for the geometric-mean ratio: t interval on the log ratios (pairs treated as independent; it
+    # ignores clustering within projects, so it is if anything too narrow). Two-sided 97.5% t quantiles by df.
+    t975 = {1: 12.706, 2: 4.303, 3: 3.182, 4: 2.776, 22: 2.074, 26: 2.056}
+    if len(logs) > 1 and len(logs) - 1 in t975:
+        mean = sum(logs) / len(logs)
+        se = math.sqrt(sum((x - mean) ** 2 for x in logs) / (len(logs) - 1) / len(logs))
+        ci = f"95% interval {math.exp(mean - t975[len(logs) - 1] * se):.2f}-{math.exp(mean + t975[len(logs) - 1] * se):.2f}x"
+    else:
+        ci = "95% interval not computed (no t quantile listed for this sample size)"
+    print(f"{label} | cost per session: {ci}")
     print(f"{label} | cost per session: median harness {mid(hm)/1e3:.0f}k vs single file {mid(cm)/1e3:.0f}k tokens; "
           f"paired ratio median {med:.2f}x (range {s[0]:.2f}-{s[-1]:.2f}); harness cheaper in {cheaper} of {len(rows)} pairs; "
           f"signed-rank on log ratio p = {p:.3f}; geometric-mean ratio {math.exp(sum(logs)/len(logs)):.2f}x")

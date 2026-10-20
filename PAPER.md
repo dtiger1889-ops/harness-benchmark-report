@@ -22,9 +22,11 @@ checks first. A second judge from another model family (Codex Sol) re-judged the
 **Results.** The question that decides whether the harness is worth keeping: does it make fewer errors, at the same
 or lower cost per session? Across 23 paired sessions in the three measurement runs, the harness session failed a
 must-pass check in 2 and the single-file session in 5. In the pairs where only one side made an error, it was the
-single file 4 times and the harness once (exact paired test p = 0.375: too few errors to rule out chance). Cost per
-session was the same: within a pair the harness used a median 1.02x the single file's total tokens and was cheaper
-in 11 of 23 pairs (p = 0.82). So the direction is fewer errors at the same cost, **not significant**. The judge's
+single file 4 times and the harness once (exact paired test p = 0.375: too few errors to rule out chance). No cost
+difference per session was detected: within a pair the harness used a median 1.02x the single file's total tokens
+and was cheaper in 11 of 23 pairs (p = 0.82), but the 95% interval for the ratio runs from 0.78x to 1.30x, so equal
+cost is not established either. So the direction is fewer errors with no detected cost difference, **not
+significant** on either count. The judge's
 overall preference points the same way (4 projects lean harness, 1 the single file, 1 even; sign test p = 0.375),
 and the third run went against the harness.
 
@@ -151,7 +153,11 @@ pre-registered test.
   gives 3 against 6 sessions (2 against 5 pairs, p = 0.45). Every variant points the same way; none is significant.
 - **Cost:** the paired ratio of harness to single-file total tokens has a median of 1.02x and a geometric mean of
   1.00x, ranging from 0.27x to 6.11x; the harness was cheaper in 11 of 23 pairs (signed-rank test on the log ratio,
-  p = 0.82). Session-to-session variation dwarfs any difference between the arms.
+  p = 0.82). No difference was detected, but that is not the same as equal cost: the 95% interval for the
+  geometric-mean ratio is 0.78x to 1.30x (a t interval on the log ratios that treats pairs as independent, so if
+  anything too narrow), which leaves room for the harness costing up to about 30% more or 22% less per session.
+  The frozen plan's cost allowance (harness median at most 1.5x the single file) is met; that is a looser bar than
+  "same or better". Session-to-session variation dwarfs any difference between the arms.
 - **With the pilot's 4 pairs:** errors 2 against 6 sessions (1 against 5 pairs, p = 0.22); cost unchanged (0.99x).
 
 These figures are computed by [evidence/errors_cost.py](evidence/errors_cost.py) from the evidence CSVs, per run
