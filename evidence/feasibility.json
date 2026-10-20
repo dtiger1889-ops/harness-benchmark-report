@@ -1,0 +1,231 @@
+{
+  "description": "2026-10-20 planning sensitivity; no no-notes trials run",
+  "assumptions": {
+    "two_sided_error_test_alpha": 0.05,
+    "target_power": 0.8,
+    "independent_pairs_only_for_session_scenarios": true,
+    "no_notes_effect_unknown": true,
+    "cost_mc_repetitions": 20000,
+    "cost_mc_seed": 20261020,
+    "cost_mc_max_standard_error": 0.0035355339059327377
+  },
+  "historical": {
+    "pairs": 23,
+    "harness_error_sessions": 2,
+    "comparison_error_sessions": 5,
+    "harness_only_errors": 1,
+    "comparison_only_errors": 4,
+    "sd_log_paired_cost": 0.5957730736812888,
+    "equal_weight_project_geometric_ratio": 0.9680283937321076,
+    "project_t95_interval": [
+      0.7533333229399295,
+      1.2439101557522456
+    ]
+  },
+  "exact_binary_power": [
+    {
+      "scenario": "historical organization comparison (sensitivity only)",
+      "none_only_error_probability": 0.17391304347826086,
+      "harness_only_error_probability": 0.043478260869565216,
+      "absolute_error_reduction": 0.13043478260869565,
+      "power_12_pairs": 0.007201859850360813,
+      "power_24_pairs": 0.10727985674245276,
+      "first_pairs_at_80_percent_power": 106
+    },
+    {
+      "scenario": "10 percentage point reduction",
+      "none_only_error_probability": 0.2,
+      "harness_only_error_probability": 0.1,
+      "absolute_error_reduction": 0.1,
+      "power_12_pairs": 0.009198951935999964,
+      "power_24_pairs": 0.06463682243692304,
+      "first_pairs_at_80_percent_power": 249
+    },
+    {
+      "scenario": "25 percentage point reduction",
+      "none_only_error_probability": 0.3,
+      "harness_only_error_probability": 0.05,
+      "absolute_error_reduction": 0.25,
+      "power_12_pairs": 0.08015044254637468,
+      "power_24_pairs": 0.43218896618138897,
+      "first_pairs_at_80_percent_power": 45
+    },
+    {
+      "scenario": "40 percentage point reduction",
+      "none_only_error_probability": 0.45,
+      "harness_only_error_probability": 0.05,
+      "absolute_error_reduction": 0.4,
+      "power_12_pairs": 0.32012911494513,
+      "power_24_pairs": 0.799369700170446,
+      "first_pairs_at_80_percent_power": 25
+    },
+    {
+      "scenario": "50 percentage point reduction, no reverse failures",
+      "none_only_error_probability": 0.5,
+      "harness_only_error_probability": 0.0,
+      "absolute_error_reduction": 0.5,
+      "power_12_pairs": 0.6127929687499988,
+      "power_24_pairs": 0.9966946244239819,
+      "first_pairs_at_80_percent_power": 15
+    }
+  ],
+  "project_sign_test_power": [
+    {
+      "true_probability_project_leans_harness": 0.6,
+      "power_six_projects": 0.04665599999999999,
+      "first_non_tied_projects_at_80_percent_power": 199
+    },
+    {
+      "true_probability_project_leans_harness": 0.7,
+      "power_six_projects": 0.11764899999999995,
+      "first_non_tied_projects_at_80_percent_power": 49
+    },
+    {
+      "true_probability_project_leans_harness": 0.8,
+      "power_six_projects": 0.2621440000000001,
+      "first_non_tied_projects_at_80_percent_power": 20
+    },
+    {
+      "true_probability_project_leans_harness": 0.9,
+      "power_six_projects": 0.531441,
+      "first_non_tied_projects_at_80_percent_power": 12
+    }
+  ],
+  "paired_error_significance_minimum_favorable_counts": {
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 8,
+    "10": 9,
+    "11": 10,
+    "12": 10
+  },
+  "cost_sensitivity_iid_lognormal_one_sided_t": [
+    {
+      "pairs": 12,
+      "true_geometric_mean_ratio": 1.0,
+      "upper_ratio_limit_to_establish": 1.0,
+      "estimated_power": 0.0498
+    },
+    {
+      "pairs": 12,
+      "true_geometric_mean_ratio": 1.0,
+      "upper_ratio_limit_to_establish": 1.1,
+      "estimated_power": 0.1322
+    },
+    {
+      "pairs": 12,
+      "true_geometric_mean_ratio": 0.9,
+      "upper_ratio_limit_to_establish": 1.0,
+      "estimated_power": 0.1402
+    },
+    {
+      "pairs": 12,
+      "true_geometric_mean_ratio": 0.9,
+      "upper_ratio_limit_to_establish": 1.1,
+      "estimated_power": 0.29565
+    },
+    {
+      "pairs": 12,
+      "true_geometric_mean_ratio": 0.8,
+      "upper_ratio_limit_to_establish": 1.0,
+      "estimated_power": 0.3322
+    },
+    {
+      "pairs": 12,
+      "true_geometric_mean_ratio": 0.8,
+      "upper_ratio_limit_to_establish": 1.1,
+      "estimated_power": 0.5363
+    },
+    {
+      "pairs": 12,
+      "true_geometric_mean_ratio": 0.7,
+      "upper_ratio_limit_to_establish": 1.0,
+      "estimated_power": 0.6246
+    },
+    {
+      "pairs": 12,
+      "true_geometric_mean_ratio": 0.7,
+      "upper_ratio_limit_to_establish": 1.1,
+      "estimated_power": 0.79785
+    },
+    {
+      "pairs": 24,
+      "true_geometric_mean_ratio": 1.0,
+      "upper_ratio_limit_to_establish": 1.0,
+      "estimated_power": 0.0513
+    },
+    {
+      "pairs": 24,
+      "true_geometric_mean_ratio": 1.0,
+      "upper_ratio_limit_to_establish": 1.1,
+      "estimated_power": 0.1896
+    },
+    {
+      "pairs": 24,
+      "true_geometric_mean_ratio": 0.9,
+      "upper_ratio_limit_to_establish": 1.0,
+      "estimated_power": 0.2097
+    },
+    {
+      "pairs": 24,
+      "true_geometric_mean_ratio": 0.9,
+      "upper_ratio_limit_to_establish": 1.1,
+      "estimated_power": 0.4855
+    },
+    {
+      "pairs": 24,
+      "true_geometric_mean_ratio": 0.8,
+      "upper_ratio_limit_to_establish": 1.0,
+      "estimated_power": 0.5549
+    },
+    {
+      "pairs": 24,
+      "true_geometric_mean_ratio": 0.8,
+      "upper_ratio_limit_to_establish": 1.1,
+      "estimated_power": 0.81515
+    },
+    {
+      "pairs": 24,
+      "true_geometric_mean_ratio": 0.7,
+      "upper_ratio_limit_to_establish": 1.0,
+      "estimated_power": 0.88485
+    },
+    {
+      "pairs": 24,
+      "true_geometric_mean_ratio": 0.7,
+      "upper_ratio_limit_to_establish": 1.1,
+      "estimated_power": 0.97595
+    }
+  ],
+  "reference_worker_workload_not_subscription_forecast": {
+    "harness": {
+      "historical_medians_by_project": {
+        "A": 631571,
+        "B": 350211,
+        "C": 1089611.5,
+        "D": 894044.5,
+        "E": 366010,
+        "F": 1435487.5
+      },
+      "two_sessions_per_project_reference_tokens": 9533871.0
+    },
+    "comparison": {
+      "historical_medians_by_project": {
+        "A": 460283,
+        "B": 304575,
+        "C": 999474.0,
+        "D": 866434.0,
+        "E": 613887,
+        "F": 1507289.5
+      },
+      "two_sessions_per_project_reference_tokens": 9503885.0
+    }
+  },
+  "planned_invocations_without_replacements_or_retries": {
+    "workers": 24,
+    "calibration_judges": 60,
+    "pair_judges": 24,
+    "fact_diagnostics": 24
+  }
+}

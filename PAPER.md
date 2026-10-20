@@ -3,9 +3,9 @@
 Second study in this repository. The first ([REPORT.md](REPORT.md)) measured cost inside single fresh sessions. This
 one asks whether the way project notes are organized changes the quality of the next piece of work.
 
-Data version: every number below is computed from the benchmark's private results repository at commit `d531541`.
+Data version: study results are computed from the benchmark's private results repository at commit `d531541`.
 The per-trial and per-verdict rows are published in [evidence/](evidence/); the scripts that make the figures read
-only those files.
+only those files. Section 10 separately reports hypothetical planning calculations, not new trial results.
 
 ## 1. Abstract
 
@@ -302,6 +302,25 @@ agreeing is still not a human check, and this study has none.
   run offline. Nothing here speaks for other people's projects or for large codebases.
 - **One worker model.** Every trial ran on Claude Sonnet 5.5. A different worker could use the notes differently.
 - **Six projects.** No result short of six of six could reach significance. The test has little power.
+- **Only one part of the harness is tested.** Both arms receive the saved project facts, so the comparison
+  measures how those notes are organized. It cannot estimate the benefit of keeping notes instead of
+  re-explaining or rediscovering the project. User-level hooks, skills and other integrations were switched off;
+  this is not a test of the owner's whole working system. Chains of resumed sessions, the owner's time spent
+  correcting the agent, and the work of creating and maintaining notes are also outside the measurement.
+- **Few errors distinguish the arms.** Only five of the 23 pairs have an error on exactly one side. Even if all
+  five had favored the harness, the exact two-sided error test would give p = 0.0625, above 0.05. The observed
+  split is four to one, p = 0.375. More repeats on the same projects can clarify their failure rates, but do not
+  add independent projects for the pre-registered project test. Neither result establishes that the harness
+  has no benefit.
+- **Unchanged cost is not established.** The session cost interval in section 4 permits meaningful savings or
+  extra cost and ignores clustering within projects. A non-significant difference does not show equivalence.
+  A claim of acceptable extra cost needs a limit fixed before collection; the original 1.5x allowance does not
+  establish the owner's stricter goal of the same or lower cost.
+- **A subscription budget limits what can be resolved.** There is no measured conversion from these token
+  totals to the share of the owner's subscription allowance. A small test may detect a large improvement and
+  miss a useful smaller one. More runs should follow a sample-size and usage plan, rather than continue until
+  a significance threshold is crossed. Focused tests of real failure cases can diagnose where notes help,
+  but their results do not estimate how often those failures occur in everyday work.
 - **Second judge covers runs 1-2 only.** Run 3 was judged by the first judge alone.
 - **Voids are not neutral.** In run 1 the rule voided 3 of 13 harness trials and no single-file trials: the harness
   arm explored more, so the surviving sample is "trials that stayed inside their folder", which removes harness
@@ -376,3 +395,20 @@ The next test runs the same six projects with notes against no notes: the notes 
 identical, and a brief that does not point at notes. It will report the same pair verdicts and total tokens, plus a
 count of the project's own rules that the no-notes side visibly breaks. Results will be added here when that test
 has run.
+
+**Planning check, 2026-10-20.** The first round plans two pairs on each project: 12 pairs, or 24 worker trials.
+It is a diagnostic with limited ability to establish an improvement. Under a hypothetical error pattern matching
+this study's four comparison-only errors and one harness-only error in 23 pairs, an exact paired test with 12
+independent pairs has only a 0.7% chance of detecting the improvement at the two-sided 0.05 threshold. This is a
+sensitivity assumption, not an estimate of how the no-notes arm will behave. Even hypothetical reductions of 25
+and 40 percentage points give only 8% and 32% detection chances, respectively, under the joint error rates listed
+in [feasibility.json](evidence/feasibility.json). Repeating the same six projects also leaves only six independent
+projects for the project-level test.
+
+Cost may remain unresolved even if errors improve. With the historical variation in paired token use, a
+simulation of 12 independent pairs gives about a 14% chance of establishing lower cost when the true saving is
+10%. This illustration assumes normally distributed log cost ratios and uses a hypothetical one-sided t test;
+it does not change the study's analysis or adopt a new acceptance rule. The script and all assumptions are in
+[feasibility.py](evidence/feasibility.py). A non-significant result in this small follow-up would leave the
+question open. Sample planning and the distinction between repeated tasks and independent projects follow the
+issues discussed in [Adding Error Bars to Evals](https://arxiv.org/abs/2411.00640).
