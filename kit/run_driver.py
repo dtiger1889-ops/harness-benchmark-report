@@ -95,13 +95,14 @@ def tree_hash(h, root):
 
 
 def packet_hash(pid):
-    """What a trial of this packet is built from: freeze, fixture overlay, brief and the arm builder."""
+    """What a trial of this packet is built from: freeze, fixture overlay, brief, packet.json (sources, drops,
+    facts) and the arm builder."""
     h = hashlib.sha256()
     d = P[pid]["dir"]
     for sub in ("freeze", "fixture"):
         if (d / sub).is_dir():
             tree_hash(h, d / sub)
-    h.update((d / "brief.txt").read_bytes() + (APP / "build_arms.py").read_bytes())
+    h.update((d / "brief.txt").read_bytes() + (d / "packet.json").read_bytes() + (APP / "build_arms.py").read_bytes())
     return h.hexdigest()
 
 
