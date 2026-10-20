@@ -118,8 +118,12 @@ as expected, and a fixture that named its arm was refused
 ### What is tested
 
 The project is the independent unit. Pairs are counted within each project first; a project leans to the arm with
-more pair wins. The only significance test is a two-sided exact sign test over the project leans. Pooled pair counts
-are reported but not tested, because repeat trials on one project are not independent evidence. Cost is total
+more pair wins. The only pre-registered significance test is a two-sided exact sign test over the project leans.
+Repeat pairs on one project are separate runs, but they are runs of the same task on the same copy: they show how
+reliably the agent behaves on that project, not how it would do on a different one. A test over projects answers
+"would the harness help on projects like these?", which is the question this study exists for; a test over pairs
+answers only "did it help on these six?". Pooled pair counts are reported for the second question but were not
+part of the frozen plan. Cost is total
 tokens per trial: input + output + cache read + cache write, from each run's final usage record.
 
 ## 4. Results
@@ -161,7 +165,9 @@ that run's projects; the mirror image for the single file; anything else is "no 
 met it for the harness (7 of 8 non-tied pairs, both projects). Run 3 met neither side's bar (the harness won 1 of 4
 non-tied pairs and neither project; the single file won 3 of 4 but leaned in only 1 of 2 projects). Pooled over
 runs 1-3 the same arithmetic gives the harness 15 of 21 non-tied pairs (71%) and 4 of 6 projects, but the bar was
-set per run, so that pooled figure is a description, not a verdict. The sign test, for its part, can only reach
+set per run, so that pooled figure is a description, not a verdict. Read as answering only "on these six
+projects", a sign test over those 21 non-tied pairs gives two-sided p = 0.078 (exploratory: not in the frozen plan,
+and still not significant). The sign test over projects, for its part, can only reach
 p < 0.05 here if all six projects lean the same way, so "not significant" reflects the small sample as much as the
 harness. A within-project check that weighs each project's margin of pair wins (a signed-rank test on net wins per
 project) also stays well above 0.05.
