@@ -155,6 +155,17 @@ Four projects lean harness, one leans the single file, one is even. Sign test on
 would have given p = 0.031. Run 3 did not continue the pattern: on its two projects the judge preferred the harness
 once in five pairs, and the clearest result of that run is a harness-arm failure (below).
 
+**The practical bar.** Before run 2, the plan also fixed a practical threshold beside the sign test: "harness
+better on quality" if the harness wins at least two thirds of the non-tied pairs and leans harness in a majority of
+that run's projects; the mirror image for the single file; anything else is "no practical difference shown". Run 2
+met it for the harness (7 of 8 non-tied pairs, both projects). Run 3 met neither side's bar (the harness won 1 of 4
+non-tied pairs and neither project; the single file won 3 of 4 but leaned in only 1 of 2 projects). Pooled over
+runs 1-3 the same arithmetic gives the harness 15 of 21 non-tied pairs (71%) and 4 of 6 projects, but the bar was
+set per run, so that pooled figure is a description, not a verdict. The sign test, for its part, can only reach
+p < 0.05 here if all six projects lean the same way, so "not significant" reflects the small sample as much as the
+harness. A within-project check that weighs each project's margin of pair wins (a signed-rank test on net wins per
+project) also stays well above 0.05.
+
 Most picks were low or medium confidence. The first judge called "high" only on the three pairs decided by one side
 failing a must-pass check ([evidence/first_judge_pairs.csv](evidence/first_judge_pairs.csv)).
 
