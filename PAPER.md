@@ -158,7 +158,8 @@ pre-registered test.
   anything too narrow), which leaves room for the harness costing up to about 30% more or 22% less per session.
   The frozen plan's cost allowance (harness median at most 1.5x the single file) is met; that is a looser bar than
   "same or better". Session-to-session variation dwarfs any difference between the arms.
-- **With the pilot's 4 pairs:** errors 2 against 6 sessions (1 against 5 pairs, p = 0.22); cost unchanged (0.99x).
+- **With the pilot's 4 pairs:** errors 2 against 6 sessions (1 against 5 pairs, p = 0.22); cost unchanged (median
+  paired ratio 1.02x, geometric mean 0.99x, 95% interval 0.78x to 1.25x).
 
 These figures are computed by [evidence/errors_cost.py](evidence/errors_cost.py) from the evidence CSVs, per run
 set and per project; the invented-content variant is counted by hand from [evidence/pair_notes.md](evidence/pair_notes.md).
