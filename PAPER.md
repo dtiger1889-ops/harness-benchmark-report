@@ -9,22 +9,24 @@ only those files.
 
 ## 1. Abstract
 
-**Question.** An AI coding agent resumes a real project and does its next milestone. Does it do better work when
-the project's notes are split the "harness" way (a short instruction file loaded at start, plus a state file it
-reads when it chooses) than when exactly the same lines sit in one instruction file loaded at start?
+**Question.** An AI coding agent resumes a real project and does its next milestone. Does it make fewer errors, at
+the same or lower cost per session, when the project's notes are split the "harness" way (a short instruction file
+loaded at start, plus a state file it reads when it chooses) than when exactly the same lines sit in one instruction
+file loaded at start?
 
 **Design.** Six real projects, each frozen just before a milestone that was later finished. Both arms hold the
 same facts, checked line by line; only the organization differs. Claude Sonnet 5.5 did the work headless and
 isolated; a blind judge (Claude Opus 5.5) compared each pair of outputs in both presentation orders, with must-pass
 checks first. A second judge from another model family (Codex Sol) re-judged the close calls from the first two runs.
 
-**Results.** The judge preferred the harness arm in 15 pairs, the single-file arm in 6, and called 2 even, across
-the three measurement runs. Counted by project, which is the unit that matters: 4 projects lean harness, 1 leans
-the single file, 1 is even. A two-sided sign test on the 5 projects that lean gives **p = 0.375: not significant.**
-The third run went against the harness (1 pair for it, 3 against, 1 even), so the evidence is weaker now than it
-was after the second run. Six projects is too few for any result here to be significant unless all six point the
-same way. On cost, the harness arm used 0.60x to 1.37x the single file's median total tokens per trial, depending
-on the project.
+**Results.** The question that decides whether the harness is worth keeping: does it make fewer errors, at the same
+or lower cost per session? Across 23 paired sessions in the three measurement runs, the harness session failed a
+must-pass check in 2 and the single-file session in 5. In the pairs where only one side made an error, it was the
+single file 4 times and the harness once (exact paired test p = 0.375: too few errors to rule out chance). Cost per
+session was the same: within a pair the harness used a median 1.02x the single file's total tokens and was cheaper
+in 11 of 23 pairs (p = 0.82). So the direction is fewer errors at the same cost, **not significant**. The judge's
+overall preference points the same way (4 projects lean harness, 1 the single file, 1 even; sign test p = 0.375),
+and the third run went against the harness.
 
 **What this does not measure.** Both arms carry the same notes, so whatever notes save when work resumes (not
 re-explaining the project, finding information, picking up after a cleared context) is present in both and cancels
@@ -127,6 +129,33 @@ part of the frozen plan. Cost is total
 tokens per trial: input + output + cache read + cache write, from each run's final usage record.
 
 ## 4. Results
+
+### Errors and cost per session
+
+The owner's question for this benchmark is whether the harness makes fewer errors at the same or lower cost per
+session. Each judged pair is two sessions of the same task, one per arm, run back to back, so the comparison is
+made within pairs. An error is a failed must-pass check (section 3), counted when the judge or grading script failed
+the session in either presentation order. These checks were fixed before each run; reading them as the headline
+was the owner's call after the runs, so this section is a re-analysis of pre-registered measurements, not a
+pre-registered test.
+
+| Runs 1-3, 23 paired sessions per arm | Harness | Single file |
+|---|---|---|
+| Sessions with a must-pass error | 2 | 5 |
+| Pairs where only this side erred | 1 | 4 |
+| Median total tokens per session | 673k | 706k |
+
+- **Errors:** the single file erred in more than twice as many sessions, but with 5 pairs where only one side erred,
+  a 4-to-1 split has an exact two-sided p of 0.375. Counting only errors flagged in both orders gives 2 against 4.
+  Also counting invented content that was not a must-pass check (a page and build script nobody asked for, run 1)
+  gives 3 against 6 sessions (2 against 5 pairs, p = 0.45). Every variant points the same way; none is significant.
+- **Cost:** the paired ratio of harness to single-file total tokens has a median of 1.02x and a geometric mean of
+  1.00x, ranging from 0.27x to 6.11x; the harness was cheaper in 11 of 23 pairs (signed-rank test on the log ratio,
+  p = 0.82). Session-to-session variation dwarfs any difference between the arms.
+- **With the pilot's 4 pairs:** errors 2 against 6 sessions (1 against 5 pairs, p = 0.22); cost unchanged (0.99x).
+
+These figures are computed by [evidence/errors_cost.py](evidence/errors_cost.py) from the evidence CSVs, per run
+set and per project; the invented-content variant is counted by hand from [evidence/pair_notes.md](evidence/pair_notes.md).
 
 ![Pair verdicts per project, first judge on all six projects, and first vs second judge on the 18 close-call pairs](figures/project_leans.png)
 
