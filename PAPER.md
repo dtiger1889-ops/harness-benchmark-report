@@ -126,8 +126,8 @@ more pair wins. The only pre-registered significance test is a two-sided exact s
 Repeat pairs on one project are separate runs, but they are runs of the same task on the same copy: they show how
 reliably the agent behaves on that project, not how it would do on a different one. A test over projects answers
 "would the harness help on projects like these?", which is the question this study exists for; a test over pairs
-answers only "did it help on these six?". Pooled pair counts are reported for the second question but were not
-part of the frozen plan. Cost is total
+answers only "did it help on these six?". The frozen plan called for pooled pair counts as a description; any
+significance test on them below is new and was not pre-registered. Cost is total
 tokens per trial: input + output + cache read + cache write, from each run's final usage record.
 
 ## 4. Results
