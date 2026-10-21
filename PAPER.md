@@ -1,7 +1,10 @@
-# Does a notes harness help an AI coding agent pick up real work? A paired test on six projects
+# Measuring how project notes affect AI coding agents: a benchmark methodology in progress
 
 Second study in this repository. The first ([REPORT.md](REPORT.md)) measured cost inside single fresh sessions. This
-one asks whether the way project notes are organized changes the quality of the next piece of work.
+one develops a way to test whether the organization of project notes changes the quality and cost of the next
+piece of work. The methodology is still being refined through trials on six real projects. Running the benchmark
+is expensive: workers alone used 64.5 million tokens across 76 trials, with judging, calibration and audits adding
+work beyond those trials. The results below inform that development; the broader question remains open.
 
 Data version: study results are computed from the benchmark's private results repository at commit `d531541`.
 The per-trial and per-verdict rows are published in [evidence/](evidence/); the scripts that make the figures read
@@ -19,16 +22,18 @@ same facts, checked line by line; only the organization differs. Claude Sonnet 5
 isolated; a blind judge (Claude Opus 5.5) compared each pair of outputs in both presentation orders, with must-pass
 checks first. A second judge from another model family (Codex Sol) re-judged the close calls from the first two runs.
 
-**Results.** The question that decides whether the harness is worth keeping: does it make fewer errors, at the same
-or lower cost per session? Across 23 paired sessions in the three measurement runs, the harness session failed a
-must-pass check in 2 and the single-file session in 5. In the pairs where only one side made an error, it was the
-single file 4 times and the harness once (exact paired test p = 0.375: too few errors to rule out chance). No cost
-difference per session was detected: within a pair the harness used a median 1.02x the single file's total tokens
-and was cheaper in 11 of 23 pairs (p = 0.82), but the 95% interval for the ratio runs from 0.78x to 1.30x, so equal
-cost is not established either. So the direction is fewer errors with no detected cost difference, **not
-significant** on either count. The judge's
-overall preference points the same way (4 projects lean harness, 1 the single file, 1 even; sign test p = 0.375),
-and the third run went against the harness.
+**Methodology in progress.** The runs exposed problems in token accounting, grading, trial isolation rules and
+human review. Sections 6-8 document those problems and the changes they prompted. The current results cover 23
+paired sessions across six projects: 2 harness sessions and 5 single-file sessions failed a must-pass check, and
+the median paired token ratio was 1.02x. These are preliminary observations from a small sample; they do not
+establish fewer errors at the same or lower cost. Section 4 gives the statistical analysis and uncertainty.
+
+**The cost of measuring.** The 76 worker trials, including voids and the pilot, used 64.5 million tokens.
+The first judge's 54 saved calls used another 2.1 million and the second judge's 36 calls another 1.5 million.
+Those totals exclude calibration and audit work. More independent projects, repeated trials and checks on the
+judges all require additional usage. This study runs on a subscription, so token totals are reported without
+turning them into a dollar bill or a claimed share of the subscription allowance. The next round is a fixed,
+small diagnostic; section 10 states its planned size and the limits of what it can resolve.
 
 **What this does not measure.** Both arms carry the same notes, so whatever notes save when work resumes (not
 re-explaining the project, finding information, picking up after a cleared context) is present in both and cancels

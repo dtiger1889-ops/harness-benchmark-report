@@ -1,6 +1,6 @@
 # Does a memory harness make coding agents cheaper? A paired benchmark
 
-**Follow-up study: [PAPER.md](PAPER.md)** tests whether the harness changes the quality of the next real milestone when an agent resumes six real projects (blind judge, both presentation orders, a second judge from another model family). Result: 4 projects lean harness, 1 leans the single-file comparison, 1 is even; not significant (p = 0.375). Data, figures and a replication kit are linked from it.
+**Follow-up study: [PAPER.md](PAPER.md)** develops a benchmark for the quality and cost of an agent's next milestone on six real projects. The methodology is still in progress, and running it is expensive: 76 worker trials used 64.5 million tokens, before judging, calibration and audits. The paper documents the method, preliminary results, failures and limits, with data, figures and a replication kit.
 
 ![Superseded chart: change in median output tokens across the eight tasks, from the original output counts later found to be wrong](assets/example-output.png)
 
